@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nome": "Estagiário Burger",
+    "ingredientes": "Pão francês, Hambúrguer de carne 100g, Queijo mussarela",
+    "descricao": "Simples, direto e com potencial. Perfeito pra quem está começando na área!"
+  },
+  {
+    "id": 2,
+    "nome": "Júnior Burger",
+    "ingredientes": "Pão brioche, Hambúrguer de carne 120g, Queijo cheddar, Alface, Maionese caseira",
+    "descricao": "Mais estruturado, mas ainda aprendendo o jogo. Um clássico com alma jovem."
+  },
+  {
+    "id": 3,
+    "nome": "Pleno Burger",
+    "ingredientes": "Pão artesanal, Hambúrguer 150g, Queijo prato, Tomate, Bacon, Molho especial",
+    "descricao": "Já sabe o que está fazendo. Complexo na medida certa e bem saboroso."
+  },
+  {
+    "id": 4,
+    "nome": "Sênior Burger",
+    "ingredientes": "Pão australiano, Hambúrguer 180g, Cheddar duplo, Bacon crocante, Cebola caramelizada, Rúcula, Maionese de páprica",
+    "descricao": "Responsável, robusto e cheio de camadas. Um hambúrguer com presença!"
+  },
+  {
+    "id": 5,
+    "nome": "Tech Lead Supreme",
+    "ingredientes": "Pão de fermentação natural, Duplo hambúrguer 180g, Queijo gouda e emmental, Ovo caipira, Jalapeños, Cebola roxa, BBQ de whisky, Alface americana",
+    "descricao": "Lidera projetos, equipes e também o seu apetite. Complexo, intenso e inesquecível."
+  }
+]

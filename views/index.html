@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBurguer</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Bem vindo ao DevBurguer!</h1>
+        <p>A hamburgueria preferida dos programadores</p>
+    </header>
+    <section>
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <strong>Estagiário Burger:</strong>
+                Pão francês, Hambúrguer de carne 100g, Queijo mussarela
+                <br /><em>Simples, direto e com potencial. Perfeito pra quem está começando na área!</em>
+            </li>
+            <li>
+                <strong>Júnior Burger:</strong>
+                Pão brioche, Hambúrguer de carne 120g, Queijo cheddar, Alface, Maionese caseira
+                <br /><em>Mais estruturado, mas ainda aprendendo o jogo. Um clássico com alma jovem.</em>
+            </li>
+            <li>
+                <strong>Pleno Burger:</strong>
+                Pão artesanal, Hambúrguer 150g, Queijo prato, Tomate, Bacon, Molho especial
+                <br /><em>Já sabe o que está fazendo. Complexo na medida certa e bem saboroso.</em>
+            </li>
+            <li>
+                <strong>Sênior Burger:</strong>
+                Pão australiano, Hambúrguer 180g, Cheddar duplo, Bacon crocante, Cebola caramelizada, Rúcula, Maionese
+                de páprica
+                <br /><em>Responsável, robusto e cheio de camadas. Um hambúrguer com presença!</em>
+            </li>
+            <li>
+                <strong>Tech Lead Supreme:</strong>
+                Pão de fermentação natural, Duplo hambúrguer 180g, Queijo gouda e emmental, Ovo caipira, Jalapeños,
+                Cebola roxa, BBQ de whisky, Alface americana
+                <br /><em>Lidera projetos, equipes e também o seu apetite. Complexo, intenso e inesquecível.</em>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Sugira um novo lanche</h2>
+        <form action="/sugestao" method="GET">
+            <label for="nome">Nome do lanche:</label><br />
+            <input type="text" id="nome" name="nome" required /><br /><br />
+
+            <label for="ingredientes">Ingredientes:</label><br />
+            <textarea id="ingredientes" name="ingredientes" rows="4" cols="40" required></textarea><br /><br />
+
+            <button type="submit">Enviar sugestão</button>
+        </form>
+    </section>
+    <hr />
+    <footer>
+        <p>
+            <a href="/contato">Fale com a gente</a> |
+            <a href="/api/lanches">Ver API de lanches</a>
+        </p>
+    </footer>
+</body>
+
+</html>
