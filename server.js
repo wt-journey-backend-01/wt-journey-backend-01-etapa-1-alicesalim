@@ -11,12 +11,14 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
-app.get('/contato', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'contato.html'));
+app.post('/contato', (req, res) => {
+    const { nome, email, assunto, mensagem } = req.body;
+    res.redirect(`/contato-recebido?nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&assunto=${encodeURIComponent(assunto)}&mensagem=${encodeURIComponent(mensagem)}`);
 });
 
-app.post('/contato-recebido', (req, res) => {
-    const { nome, email, assunto, mensagem } = req.body;
+
+app.get('/contato-recebido', (req, res) => {
+    const { nome, email, assunto, mensagem } = req.query;
 
     res.status(200)
     .set("Content-Type", "text/html")
@@ -37,7 +39,7 @@ app.post('/contato-recebido', (req, res) => {
 
     <section>
         <a href="/">Voltar</a>
-        <p>Ola ${nome} recebemos sua mensagem sobre ${assunto}, vamos encaminhar a seguinte mensagem ${mensagem} para nossa equipe e te daremos um retorno atraves do email ${email}</p>
+        <p>Ola ${nome} recebemos sua mensagem e te daremos um retorno atraves do email ${email}, sobre ${assunto}, vamos encaminhar a seguinte mensagem ${mensagem} para nossa equipe</p>
     </section>
 </body>
 
