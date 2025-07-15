@@ -18,7 +18,9 @@ app.get('/contato', (req, res) => {
 app.post('/contato-recebido', (req, res) => {
     const { nome, email, assunto, mensagem } = req.body;
 
-    res.status(200).send(`
+    res.status(200)
+    .set("Content-Type", "text/html")
+    .send(`
         <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -35,7 +37,7 @@ app.post('/contato-recebido', (req, res) => {
 
     <section>
         <a href="/">Voltar</a>
-        <p>Ola ${nome} recebemos sua mensagem sobre ${assunto}, vamos encaminhar para nossa equipe e te daremos um retorno atraves do email ${email}</p>
+        <p>Ola ${nome} recebemos sua mensagem sobre ${assunto}, vamos encaminhar a seguinte mensagem ${mensagem} para nossa equipe e te daremos um retorno atraves do email ${email}</p>
     </section>
 </body>
 
@@ -80,10 +82,6 @@ app.get('/sugestao', (req, res) => {
 
 </html>
         `);
-});
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 app.use((req, res) => {
