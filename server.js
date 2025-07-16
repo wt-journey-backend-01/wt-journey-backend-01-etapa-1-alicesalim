@@ -11,10 +11,14 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
-app.post('/contato', (req, res) => {
-    const { nome, email, assunto, mensagem } = req.body;
-    res.redirect(`/contato-recebido?nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&assunto=${encodeURIComponent(assunto)}&mensagem=${encodeURIComponent(mensagem)}`);
+app.get('/contato', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'contato.html'));
 });
+
+app.post('/contato', (req, res) => {
+res.redirect(`/contato-recebido?nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&assunto=${encodeURIComponent(assunto)}&mensagem=${encodeURIComponent(mensagem)}`);
+})
+
 
 
 app.get('/contato-recebido', (req, res) => {
