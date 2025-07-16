@@ -3,6 +3,7 @@ const path = require('path');
 
 const app = express();
 const PORT = 3000;
+
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
@@ -16,8 +17,11 @@ app.get('/contato', (req, res) => {
 });
 
 app.post('/contato', (req, res) => {
-res.redirect(`/contato-recebido?nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&assunto=${encodeURIComponent(assunto)}&mensagem=${encodeURIComponent(mensagem)}`);
-})
+  const { nome, email, assunto, mensagem } = req.body;
+
+  res.redirect(`/contato-recebido?nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&assunto=${encodeURIComponent(assunto)}&mensagem=${encodeURIComponent(mensagem)}`);
+});
+
 
 
 
@@ -44,6 +48,7 @@ app.get('/contato-recebido', (req, res) => {
     <section>
         <a href="/">Voltar</a>
         <p>Ola ${nome} recebemos sua mensagem e te daremos um retorno atraves do email ${email}, sobre ${assunto}, vamos encaminhar a seguinte mensagem ${mensagem} para nossa equipe</p>
+        
     </section>
 </body>
 
